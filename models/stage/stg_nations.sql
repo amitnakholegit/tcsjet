@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='table', alias='stg_nations_new') }}
 
 with
     nation as (
