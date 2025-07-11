@@ -14,6 +14,6 @@ select
         account_balance,
         market_segment,
         comment
-from {{ ref('stg_customers') }}
+from {{ ref('stg_customers1') }}
 )
 select * from customer

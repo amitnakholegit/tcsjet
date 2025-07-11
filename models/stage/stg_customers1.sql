@@ -1,3 +1,4 @@
+{{ config(alias='stg_customers1')}}
 with
     customer as (
         select

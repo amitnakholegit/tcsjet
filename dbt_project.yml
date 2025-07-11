@@ -40,4 +40,8 @@ models:
     # Applies to all files under models/stage/
     stage:
       +materialized: table
+
+    assignment:
+      stage:
+        +materialized: table
       

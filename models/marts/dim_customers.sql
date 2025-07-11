@@ -1,5 +1,5 @@
 with customer as (
-select * from {{ ref('stg_customers') }}
+select * from {{ ref('stg_customers1') }}
 ),
  
 nation as (
