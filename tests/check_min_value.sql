@@ -6,7 +6,7 @@
 }}
  
 with orders as (
-    select * from {{ ref('stg_orders') }}
+    select * from {{ ref('stg_orders1') }}
 )
  
 select order_id, sum(total_price) ordertotal

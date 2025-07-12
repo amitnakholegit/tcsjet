@@ -55,7 +55,7 @@ models:
       - name: comment
         description: '{{ doc("comment") }}'
  
-  - name: stg_orders
+  - name: stg_orders1
     description: staging layer for orders data
     columns:
       - name: order_id

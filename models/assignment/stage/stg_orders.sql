@@ -1,15 +1,18 @@
-with orders as
-(select  ID as order_id, 
-        CUSTOMER_ID, 
-        ORDERED_AT,
-        extract('day',ORDERED_AT) as day, 
-        STORE_ID, 
-        SUBTOTAL,
-        TAX_PAID,
-        (TAX_PAID*100)/subtotal as TAX_PAID_percentage,  
-        ORDER_TOTAL        
-from {{source("asgn_src","orders")}}
-where order_total > 0
-)
+with
+    orders as (
+        select
+            id as order_id,
+            customer_id,
+            ordered_at,
+            extract('day', ordered_at) as day,
+            store_id,
+            subtotal,
+            tax_paid,
+            (tax_paid * 100) / subtotal as tax_paid_percentage,
+            order_total
+        from {{ source("asgn_src", "orders") }}
+        where order_total > 0
+    )
 
-select * from orders
+select *
+from orders
