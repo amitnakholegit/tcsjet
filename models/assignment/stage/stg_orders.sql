@@ -6,7 +6,6 @@ with
             ordered_at,
             extract('day', ordered_at) as day,
             store_id,
-            subtotal,
             tax_paid,
             (tax_paid * 100) / subtotal as tax_paid_percentage,
             order_total
