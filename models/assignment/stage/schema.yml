@@ -5,7 +5,7 @@ models:
     description: '{{ doc("stg_orders") }}'
     columns:
       - name: order_id
-        description: this is order id columns which is having define unique values 
+        description: this is order id columns which have unique values
         tests:
           - not_null
           - unique
